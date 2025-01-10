@@ -4,6 +4,9 @@ import "@/styles/globals.css";
 export const metadata: Metadata = {
   title: "Spotify Wrapped App",
   description: "developed by @chefberke, @chefharun",
+  icons: {
+    icon: "/",
+  },
 };
 
 export default function RootLayout({
@@ -13,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="bg-background">{children}</body>
     </html>
   );
 }
