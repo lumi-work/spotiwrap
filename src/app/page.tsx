@@ -1,21 +1,17 @@
-import Logo from "@/assets/logo.svg";
-import Banner from "@/components/banner";
-import Image from "next/image";
+import Header from "@/components/landing/header";
+import Navbar from "@/components/landing/navbar";
+import Strip from "@/components/landing/strip";
 
 export default function Home() {
   return (
-    <main className="flex items-center justify-center w-full h-full">
-      <div className="max-w-[1200px] w-full h-full flex flex-col items-center justify-center">
-        <Banner />
-        {/* <Image
-          src={Logo}
-          alt="logo"
-          width={200}
-          height={200}
-          priority
-          className="w-auto h-auto"
-        /> */}
+    <main>
+      <div className="flex items-center justify-center w-full h-full">
+        <div className="max-w-[1600px] w-full flex flex-col items-center justify-center">
+          <Navbar />
+          <Header />
+        </div>
       </div>
+      <Strip />
     </main>
   );
 }
