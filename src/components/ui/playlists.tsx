@@ -26,12 +26,14 @@ const Playlists = () => {
     <div className="text-white">
       <h1>Your Playlists</h1>
       <ul>
-        {data?.items.map((playlist: any) => (
-          <li key={playlist.id}>
-            <strong>{playlist.name}</strong> -{" "}
-            {playlist.description || "no description"}
-          </li>
-        ))}
+        {data.items && data.items.length > 0
+          ? data?.items.map((playlist: any) => (
+              <li key={playlist.id}>
+                <strong>{playlist.name}</strong> -{" "}
+                {playlist.description || "no description"}
+              </li>
+            ))
+          : null}
       </ul>
     </div>
   );

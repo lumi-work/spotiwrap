@@ -1,6 +1,6 @@
 import { storeState } from "@/types/storeState";
-import { fetchAccessToken } from "@/utils/auth";
-import { fetchSpotifyUserId } from "@/utils/user";
+import { fetchAccessToken } from "@/utils/fetch/auth";
+import { fetchSpotifyUserId } from "@/utils/fetch/user";
 import { create } from "zustand";
 
 export const playlistStore = create<storeState>((set) => ({

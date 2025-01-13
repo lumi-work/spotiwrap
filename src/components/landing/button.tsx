@@ -1,6 +1,6 @@
 "use client";
 
-import { createClient } from "@/utils/client";
+import { createClient } from "@/utils/supabase/client";
 import React from "react";
 import { FaSpotify } from "react-icons/fa";
 
