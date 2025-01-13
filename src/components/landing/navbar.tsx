@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Logo from "@/assets/logo.svg";
-import { FaSpotify } from "react-icons/fa";
+import LoginButton from "./button";
 
 function Navbar() {
   return (
@@ -36,13 +36,7 @@ function Navbar() {
         </ul>
       </div>
       <div>
-        <Link
-          href={"/"}
-          className="flex items-center gap-2 text-black font-medium bg-secondary h-10 px-3 rounded-xl text-sm transition-all hover:shadow-lg hover:scale-105"
-        >
-          Login with Spotify
-          <FaSpotify className="text-xl" />
-        </Link>
+        <LoginButton />
       </div>
     </div>
   );
