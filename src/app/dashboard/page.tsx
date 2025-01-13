@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 
 import { createClient } from "@/utils/server";
+import Playlists from "@/components/ui/playlists";
 
 export default async function PrivatePage() {
   const supabase = await createClient();
@@ -10,7 +11,9 @@ export default async function PrivatePage() {
     redirect("/");
   }
 
-  console.log(data);
-
-  return <p className="text-white">Hello {data.user.user_metadata.name}!</p>;
+  return (
+    <div>
+      <Playlists />
+    </div>
+  );
 }
