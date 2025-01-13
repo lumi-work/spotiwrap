@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 
-import { createClient } from "@/utils/server";
+import { createClient } from "@/utils/fetch/server";
 import Playlists from "@/components/ui/playlists";
 
 export default async function PrivatePage() {
