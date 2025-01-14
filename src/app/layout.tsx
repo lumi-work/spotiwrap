@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Spotify Wrapped App",
   description: "developed by @chefberke, @chefharun",
   icons: {
-    icon: "/",
+    icon: "/logo.svg",
   },
 };
 

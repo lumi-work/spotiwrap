@@ -1,3 +1,4 @@
+// utils/fetch/user.ts
 export const fetchSpotifyUserId = async (accessToken: any): Promise<string | null> => {
     const response = await fetch("https://api.spotify.com/v1/me", {
       headers: {

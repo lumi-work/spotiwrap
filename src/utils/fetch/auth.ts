@@ -1,4 +1,4 @@
-// utils/auth.ts
+// utils/fetch/auth.ts
 import { createClient } from "@/utils/supabase/client";
 
 const supabase = createClient();

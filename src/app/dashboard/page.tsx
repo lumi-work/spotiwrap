@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
-
 import { createClient } from "@/utils/supabase/server";
+import Playlists from "@/components/ui/playlists";
 
 export default async function PrivatePage() {
   const supabase = await createClient();
@@ -16,7 +16,7 @@ export default async function PrivatePage() {
         1
       </div>
       <div className="flex-shrink-0 flex-grow-0 basis-[85%] max-w-[85%] h-screen">
-        2
+        <Playlists />
       </div>
     </div>
   );
