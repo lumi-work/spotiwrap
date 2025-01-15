@@ -19,14 +19,16 @@ function Leftbar() {
             className="w-auto h-auto"
           />
         </div>
-        <div>
+        <div className="flex items-center justify-center h-screen">
           <MenuItems />
         </div>
-        <div>
-          <UserInfortmation />
-        </div>
-        <div>
-          <SignOut />
+        <div className="flex items-end justify-center h-screen">
+          <div>
+            <UserInfortmation />
+          </div>
+          <div>
+            <SignOut />
+          </div>
         </div>
       </div>
     </div>
