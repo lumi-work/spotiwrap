@@ -11,7 +11,7 @@ function LoginButton() {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "spotify",
       options: {
-        redirectTo: `${window.location.origin}/auth/callback?next=/dashboard`,
+        redirectTo: `${window.location.origin}/auth/callback?next=/dashboard/overview`,
       },
     });
 

@@ -11,8 +11,7 @@ export const fetchSpotifyUserId = async (accessToken: any): Promise<string | nul
       return null;
     }
   
-    const data = await response.json();
-    console.log("user", data)
-    return data.id || null; 
+    const { id } = await response.json();
+    return id || null; 
   };
   
