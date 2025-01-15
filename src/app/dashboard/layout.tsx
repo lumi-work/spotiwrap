@@ -18,7 +18,7 @@ export default async function RootLayout({
       <div className="flex-shrink-0 flex-grow-0 basis-[15%] max-w-[15%] h-screen border-r border-gray-300/20">
         <Leftbar />
       </div>
-      <div className="flex-shrink-0 flex-grow-0 basis-[85%] max-w-[85%] h-screen">
+      <div className="flex-shrink-0 flex-grow-0 basis-[85%] max-w-[85%] h-screen py-6">
         {children}
       </div>
     </div>
