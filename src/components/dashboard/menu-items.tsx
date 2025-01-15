@@ -24,7 +24,7 @@ function MenuItems() {
           }`}
           onClick={() => routerPages("/overview")}
         >
-          home 1
+          Overview
         </li>
         <li
           className={`hover:cursor-pointer ${
