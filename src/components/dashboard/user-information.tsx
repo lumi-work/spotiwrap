@@ -15,9 +15,9 @@ async function UserInformation() {
         height={30}
         alt="user-image"
         priority
-        className="w-auto h-auto rounded-full"
+        className="w-auto h-auto rounded-full border-2 border-secondary"
       />
-      {data.user?.user_metadata.full_name}
+      <p className="font-semibold">{data.user?.user_metadata.full_name}</p>
     </div>
   );
 }
