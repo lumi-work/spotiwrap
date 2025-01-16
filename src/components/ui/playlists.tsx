@@ -1,14 +1,14 @@
 "use client";
 
+import { topItemsStore } from "@/stores/userTopItems";
 import React, { useEffect } from "react";
-import { playlistStore } from "@/stores/playlistSlice";
 
 const Playlists = () => {
-  const { data, loading, error, fetchData } = playlistStore();
+  const { data, loading, error, fetchData } = topItemsStore();
 
   useEffect(() => {
     const fetchUserPlaylists = async () => {
-      await fetchData();
+      await fetchData("tracks");
     };
 
     fetchUserPlaylists();
@@ -22,21 +22,7 @@ const Playlists = () => {
     return <p>Error: {error}</p>;
   }
 
-  return (
-    <div className="text-white">
-      <h1>Your Playlists</h1>
-      <ul>
-        {data.items && data.items.length > 0
-          ? data?.items.map((playlist: any) => (
-              <li key={playlist.id}>
-                <strong>{playlist.name}</strong> -{" "}
-                {playlist.description || "no description"}
-              </li>
-            ))
-          : null}
-      </ul>
-    </div>
-  );
+  return <div>fetch</div>;
 };
 
 export default Playlists;

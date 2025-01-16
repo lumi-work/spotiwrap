@@ -10,7 +10,7 @@ export const fetchSpotifyUserId = async (accessToken: any): Promise<string | nul
       console.error("Failed to fetch Spotify user profile:", response.statusText);
       return null;
     }
-  
+    
     const { id } = await response.json();
     return id || null; 
   };
