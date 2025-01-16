@@ -3,9 +3,11 @@
 import React from "react";
 import Error from "@/assets/error.svg";
 import Image from "next/image";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 function NotFound() {
+  const router = useRouter();
+
   return (
     <div className="flex items-center justify-center w-full h-screen">
       <div className="flex flex-col items-center justify-center">
@@ -25,9 +27,9 @@ function NotFound() {
         <div className="pt-24">
           <button
             className="text-white font-semibold text-2xl transition-all hover:scale-125 hover:text-gray-300"
-            onClick={() => redirect("/")}
+            onClick={() => router.back()}
           >
-            Go Home!
+            Go Back
           </button>
         </div>
       </div>
