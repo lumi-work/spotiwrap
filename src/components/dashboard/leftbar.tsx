@@ -22,7 +22,7 @@ function Leftbar() {
         <div className="flex items-center justify-center h-screen">
           <MenuItems />
         </div>
-        <div className="flex items-end justify-center h-screen">
+        <div className="flex items-end justify-between h-screen w-full px-6">
           <div>
             <UserInfortmation />
           </div>

@@ -15,10 +15,10 @@ export default async function RootLayout({
   }
   return (
     <div className="flex items-center justify-center h-full w-full text-white">
-      <div className="flex-shrink-0 flex-grow-0 basis-[12%] max-w-[12%] h-screen border-r border-gray-300/20">
+      <div className="flex-shrink-0 flex-grow-0 basis-[13%] max-w-[13%] h-screen border-r border-gray-300/20">
         <Leftbar />
       </div>
-      <div className="flex-shrink-0 flex-grow-0 basis-[88%] max-w-[88%] h-screen py-6">
+      <div className="flex-shrink-0 flex-grow-0 basis-[87%] max-w-[87%] h-screen py-6">
         {children}
       </div>
     </div>

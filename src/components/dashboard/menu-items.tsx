@@ -95,12 +95,18 @@ function MenuItems() {
             {section.items.map((item, itemIndex) => (
               <li
                 key={itemIndex}
-                className={`hover:cursor-pointer font-medium text-md flex items-center gap-2 pt-3 ${
+                className={`font-medium text-md flex items-center gap-2 pt-3 ${
                   isActive(item.path)
                     ? "text-white"
                     : "text-gray-400 hover:text-white"
-                } ${item.isPremium ? "hover:cursor-not-allowed" : ""}`}
-                onClick={() => routerPages(item.path)}
+                } ${
+                  item.isPremium
+                    ? "hover:cursor-not-allowed"
+                    : "hover:cursor-pointer"
+                }`}
+                onClick={() =>
+                  !item.isPremium ? routerPages(item.path) : null
+                }
               >
                 {item.icon}
                 {item.label}

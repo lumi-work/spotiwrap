@@ -22,7 +22,13 @@ const Playlists = () => {
     return <p>Error: {error}</p>;
   }
 
-  return <div>fetch</div>;
+  return (
+    <div>
+      {data?.items?.map((item: any) => (
+        <div key={item.name}>{item.name}</div>
+      ))}
+    </div>
+  );
 };
 
 export default Playlists;
