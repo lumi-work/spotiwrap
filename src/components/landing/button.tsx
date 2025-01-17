@@ -24,7 +24,7 @@ function LoginButton() {
   return (
     <button
       onClick={signInWithSpotify}
-      className="flex items-center gap-2 text-black font-medium bg-secondary h-10 px-3 rounded-xl text-sm transition-all hover:shadow-lg hover:scale-105"
+      className="flex items-center gap-2 text-neutral-200 font-medium bg-green-600 h-10 px-3 rounded-xl text-sm transition-all hover:shadow-lg hover:scale-105"
     >
       Login with Spotify
       <FaSpotify className="text-xl" />
