@@ -3,9 +3,9 @@ import { HiOutlineSpeakerWave } from "react-icons/hi2";
 
 function Strip() {
   return (
-    <div className="fixed bottom-0 w-full h-6 bg-green-500 flex items-center justify-between">
+    <div className="fixed bottom-0 w-full h-6 bg-green-600 flex items-center justify-between">
       <div></div>
-      <div className="flex items-center gap-2 font-medium text-black text-sm pr-24">
+      <div className="flex items-center gap-2 font-medium text-neutral-200 text-sm pr-24">
         <HiOutlineSpeakerWave className="" />
         <p>Listening on your playlists.</p>
       </div>

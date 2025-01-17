@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import Logo from "@/assets/logo.svg";
 import LoginButton from "./button";
+import { NavigationMenuItems } from "@/components/landing/navbar-menu";
 
 function Navbar() {
   return (
@@ -20,20 +21,7 @@ function Navbar() {
         </Link>
       </div>
       <div>
-        <ul className="flex items-center gap-12 text-white font-medium">
-          <li className="hover:text-secondary">
-            <a href="#">Home</a>
-          </li>
-          <li className="hover:text-secondary">
-            <a href="#">About Us</a>
-          </li>
-          <li className="hover:text-secondary">
-            <a href="#">Pricing</a>
-          </li>
-          <li className="hover:text-secondary">
-            <a href="#">Privacy</a>
-          </li>
-        </ul>
+        <NavigationMenuItems />
       </div>
       <div>
         <LoginButton />
