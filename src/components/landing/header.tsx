@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Header() {
   return (
-    <div className="flex items-center justify-center h-[70vh]">
+    <div className="flex items-center justify-center h-[75vh]">
       <div className="flex-col items-center justify-center text-center">
         <div>
           <h2 className="text-7xl text-white font-semibold">
