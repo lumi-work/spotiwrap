@@ -4,7 +4,7 @@ import Logo from "@/assets/logo.svg";
 
 function Footer() {
   return (
-    <div className="w-full">
+    <div className="w-full pt-24">
       <div className="flex-col items-center justify-center pt-12">
         <div className="flex items-center justify-around">
           <div className="flex-col items-center w-64">
