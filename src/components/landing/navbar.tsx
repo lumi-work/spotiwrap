@@ -24,7 +24,7 @@ function Navbar() {
         <NavigationMenuItems />
       </div>
       <div>
-        <LoginButton />
+        <LoginButton text="Login with Spotify" />
       </div>
     </div>
   );

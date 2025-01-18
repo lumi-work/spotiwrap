@@ -1,3 +1,5 @@
+import Accordions from "@/components/landing/accordion";
+import Footer from "@/components/landing/footer";
 import Header from "@/components/landing/header";
 import Navbar from "@/components/landing/navbar";
 import Strip from "@/components/landing/strip";
@@ -9,6 +11,8 @@ export default function Home() {
         <div className="max-w-[1600px] w-full flex flex-col items-center justify-center">
           <Navbar />
           <Header />
+          <Accordions />
+          <Footer />
         </div>
       </div>
       <Strip />
