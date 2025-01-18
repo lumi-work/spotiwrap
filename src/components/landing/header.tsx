@@ -8,12 +8,12 @@ function Header() {
   return (
     <div className="flex items-start justify-between w-full h-full my-48">
       <div className="flex-col items-center justify-center text-neutral-100">
-        <div className="flex items-center gap-2 border border-neutral-600 rounded-xl px-4 py-0.5 w-fit">
+        <div className="flex items-center gap-2 border border-neutral-600 rounded-xl px-3 py-0.5 w-fit">
           <p className="font-normal text-sm text-neutral-200">
             Discover the tracks that defined your year! 🚀
           </p>
         </div>
-        <div className="flex-col items-center text-start text-7xl font-bold pt-4">
+        <div className="flex-col items-center text-start text-8xl font-bold pt-4">
           <h2>We made it</h2>
           <h2>
             just for <span className="text-green-500">you!</span>
