@@ -1,36 +1,52 @@
 import React from "react";
-import Topgenres from "@/assets/topgenres.svg";
 import Image from "next/image";
+import LoginButton from "@/components/landing/button";
+import HeroImage from "@/assets/hero.svg";
+import { AvatarCircle } from "@/components/landing/circle";
 
 function Header() {
   return (
-    <div className="flex items-center justify-center h-[75vh]">
-      <div className="flex-col items-center justify-center text-center">
-        <div>
-          <h2 className="text-7xl text-white font-semibold">
-            We made it personal <br />
-            <span className="text-secondary">just for you</span>
-          </h2>
-        </div>
-        <div className="pt-6">
-          <p className="text-gray-400 px-80">
-            Discover the music that defined your year with a personalized
-            experience created just for you. Dive into your favorite tracks,
-            artists, and genres, and explore dynamic visuals and insights that
-            showcase your unique listening journey. Your music, your story, all
-            in one place.
+    <div className="flex items-start justify-between w-full h-full my-48">
+      <div className="flex-col items-center justify-center text-neutral-100">
+        <div className="flex items-center gap-2 border border-neutral-600 rounded-xl px-4 py-0.5 w-fit">
+          <p className="font-normal text-sm text-neutral-200">
+            Discover the tracks that defined your year! 🚀
           </p>
         </div>
-        <div className="flex items-center justify-center pt-24">
-          <Image
-            src={Topgenres}
-            alt="topgenres"
-            width={400}
-            height={400}
-            priority
-            className="w-auto h-auto"
-          />
+        <div className="flex-col items-center text-start text-7xl font-bold pt-4">
+          <h2>We made it</h2>
+          <h2>
+            just for <span className="text-green-500">you!</span>
+          </h2>
         </div>
+        <div className="pt-8">
+          <p className="text-neutral-400">
+            Discover the music that defined your year with a personalized <br />
+            experience. Dive into your favorite tracks, artists, and genres, and{" "}
+            <br />
+            explore visuals that showcase your unique listening journey.
+          </p>
+        </div>
+        <div className="pt-8 flex items-center justify-start gap-8">
+          <LoginButton text="Get Started" />
+          <div className="flex items-center text-neutral-200 font-medium h-10 px-3 text-sm transition-all hover:shadow-lg hover:text-neutral-400">
+            <a href="#">Learn More!</a>
+          </div>
+        </div>
+        <div className="pt-12">
+          <AvatarCircle />
+        </div>
+      </div>
+      <div className="relative border-4 border-green-500 rounded-xl">
+        <div className="absolute inset-0 w-72 h-72 blur-[200px] bg-green-500 m-auto"></div>
+
+        <Image
+          src={HeroImage}
+          alt="hero-image"
+          height={650}
+          width={650}
+          className="relative rounded-xl z-10"
+        />
       </div>
     </div>
   );

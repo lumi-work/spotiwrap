@@ -4,7 +4,7 @@ import { createClient } from "@/utils/supabase/client";
 import React from "react";
 import { FaSpotify } from "react-icons/fa";
 
-function LoginButton() {
+function LoginButton({ text }: { text: string }) {
   const supabase = createClient();
 
   async function signInWithSpotify() {
@@ -26,7 +26,7 @@ function LoginButton() {
       onClick={signInWithSpotify}
       className="flex items-center gap-2 text-neutral-200 font-medium bg-green-600 h-10 px-3 rounded-xl text-sm transition-all hover:shadow-lg hover:scale-105"
     >
-      Login with Spotify
+      {text}
       <FaSpotify className="text-xl" />
     </button>
   );
