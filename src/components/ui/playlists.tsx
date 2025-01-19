@@ -2,6 +2,8 @@
 
 import { topItemsStore } from "@/stores/userTopItems";
 import React, { useEffect } from "react";
+import Skeleton from "@/components/dashboard/skeleton";
+import toast from "react-hot-toast";
 
 const Playlists = () => {
   const { data, loading, error, fetchData } = topItemsStore();
@@ -15,17 +17,21 @@ const Playlists = () => {
   }, [fetchData]);
 
   if (loading) {
-    return <p>Loading playlists...</p>;
+    return <Skeleton width={200} height={200} />;
   }
 
   if (error) {
-    return <p>Error: {error}</p>;
+    toast.error(error);
   }
+
+  console.log(error);
 
   return (
     <div>
-      {data?.items?.map((item: any) => (
-        <div key={item.name}>{item.name}</div>
+      {data?.items?.map((item: any, index: number) => (
+        <div key={item.name}>
+          {index + 1} - {item.name}
+        </div>
       ))}
     </div>
   );
