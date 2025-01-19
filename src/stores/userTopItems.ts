@@ -7,13 +7,13 @@ export const topItemsStore = create<storeState>((set) => ({
   loading: false,
   error: null,
 
-  fetchData: async (param: string) => {
+  fetchData: async (type: string = "tracks", term: string = "short_term") => {
     set({ loading: true, error: null });
     try {
       const token = await fetchAccessToken();
       if (!token) throw new Error("No access token available");
       const response = await fetch(
-        `https://api.spotify.com/v1/me/top/${param}`,
+        `https://api.spotify.com/v1/me/top/${type}?time_range=${term}&limit=5`,
         {
           method: "GET",
           headers: {
@@ -24,7 +24,7 @@ export const topItemsStore = create<storeState>((set) => ({
       );
 
       if (!response.ok) {
-        throw new Error(`Failed to fetch user top items: ${response.statusText}`);
+        throw new Error(`Failed to fetch user top items: ${response.status}`);
       }
 
       const data = await response.json();
