@@ -1,5 +1,5 @@
 import Boxes from "@/components/dashboard/boxes";
-import Playlists from "@/components/ui/playlists";
+import UserTopItems from "@/components/dashboard/user-top-items";
 import { Toaster } from "react-hot-toast";
 
 export default function OverviewPage() {
@@ -7,7 +7,7 @@ export default function OverviewPage() {
     <div className="flex w-full h-full">
       <Toaster />
       <Boxes width={300} height={800}>
-        <Playlists />
+        <UserTopItems />
       </Boxes>
     </div>
   );

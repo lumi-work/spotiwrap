@@ -2,5 +2,5 @@ export interface storeState {
     data: any; 
     loading: boolean; 
     error: string | null; 
-    fetchData: (param?: any) => Promise<void>;
+    fetchData: (param?: string, param2?: string) => Promise<void>;
   }

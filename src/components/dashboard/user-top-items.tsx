@@ -4,13 +4,14 @@ import { topItemsStore } from "@/stores/userTopItems";
 import React, { useEffect } from "react";
 import Skeleton from "@/components/dashboard/skeleton";
 import toast from "react-hot-toast";
+import Image from "next/image";
 
-const Playlists = () => {
+const userTopItems = () => {
   const { data, loading, error, fetchData } = topItemsStore();
 
   useEffect(() => {
     const fetchUserPlaylists = async () => {
-      await fetchData("tracks");
+      await fetchData();
     };
 
     fetchUserPlaylists();
@@ -24,12 +25,18 @@ const Playlists = () => {
     toast.error(error);
   }
 
-  console.log(error);
-
   return (
     <div>
+      last 4 weeks
       {data?.items?.map((item: any, index: number) => (
         <div key={item.name}>
+          <Image
+            src={item.album.images[0].url}
+            width={100}
+            height={100}
+            alt="album-image"
+            className="w-auto h-auto rounded-xl"
+          />
           {index + 1} - {item.name}
         </div>
       ))}
@@ -37,4 +44,4 @@ const Playlists = () => {
   );
 };
 
-export default Playlists;
+export default userTopItems;
