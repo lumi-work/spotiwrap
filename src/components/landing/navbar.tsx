@@ -7,7 +7,7 @@ import { NavigationMenuItems } from "@/components/landing/navbar-menu";
 
 function Navbar() {
   return (
-    <div className="w-full flex items-center justify-between h-36 max-2xl:max-w-[1200px] max-xl:max-w-[1000px] max-lg:max-w-[900px]">
+    <div className="z-50 w-full flex items-center justify-between h-36 max-2xl:max-w-[1200px] max-xl:max-w-[1000px] max-lg:max-w-[900px]">
       <div>
         <Link href={"/"}>
           <Image
