@@ -18,7 +18,7 @@ const userTopItems = () => {
   }, [fetchData]);
 
   if (loading) {
-    return <Skeleton width={200} height={200} />;
+    return <Skeleton width={400} height={800} />;
   }
 
   if (error) {
@@ -29,7 +29,7 @@ const userTopItems = () => {
     <div>
       last 4 weeks
       {data?.items?.map((item: any, index: number) => (
-        <div key={item.name}>
+        <div key={item.name} className="flex items-center">
           <Image
             src={item.album.images[0].url}
             width={100}
