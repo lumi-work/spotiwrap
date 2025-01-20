@@ -18,7 +18,7 @@ const userTopItems = () => {
   }, [fetchData]);
 
   if (loading) {
-    return <Skeleton width={400} height={800} />;
+    return <Skeleton className="w-full h-full" />;
   }
 
   if (error) {
@@ -27,19 +27,27 @@ const userTopItems = () => {
 
   return (
     <div>
-      last 4 weeks
-      {data?.items?.map((item: any, index: number) => (
-        <div key={item.name} className="flex items-center">
-          <Image
-            src={item.album.images[0].url}
-            width={100}
-            height={100}
-            alt="album-image"
-            className="w-auto h-auto rounded-xl"
-          />
-          {index + 1} - {item.name}
-        </div>
-      ))}
+      {data?.items ? (
+        <>
+          <h2 className="font-semibold text-xl text-neutral-50 pb-12">
+            Most Listened (Last 4 Weeks)
+          </h2>
+          {data.items.map((item: any, index: number) => (
+            <div key={item.name} className="flex items-center gap-4 py-2">
+              <Image
+                src={item.album.images[0].url}
+                width={120}
+                height={120}
+                alt="album-image"
+                className="w-auto h-auto rounded-xl"
+              />
+              <p className="text-lg font-medium text-neutral-200">
+                {index + 1} - {item.name.slice(0, 20) || "Unkown Name"}
+              </p>
+            </div>
+          ))}
+        </>
+      ) : null}
     </div>
   );
 };
