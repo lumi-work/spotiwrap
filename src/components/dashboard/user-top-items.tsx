@@ -26,18 +26,18 @@ const userTopItems = () => {
   }
 
   return (
-    <div>
+    <div className="ml-3">
       {data?.items ? (
         <>
-          <h2 className="font-semibold text-xl text-neutral-50 pb-12">
-            Most Listened (Last 4 Weeks)
+          <h2 className="font-semibold text-xl text-neutral-50 pb-6 ">
+            Most Listened
           </h2>
           {data.items.map((item: any, index: number) => (
-            <div key={item.name} className="flex items-center gap-4 py-2">
+            <div key={item.name} className="flex items-center gap-4 py-2 ">
               <Image
                 src={item.album.images[0].url}
-                width={120}
-                height={120}
+                width={75}
+                height={75}
                 alt="album-image"
                 className="w-auto h-auto rounded-xl"
               />
