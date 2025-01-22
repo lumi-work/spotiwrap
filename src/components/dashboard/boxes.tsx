@@ -17,7 +17,7 @@ function Boxes({
         ...(width ? { width: `${width}px` } : {}),
         ...(height ? { height: `${height}px` } : {}),
       }}
-      className={`border-2 border-neutral-800 rounded-xl flex items-center justify-center ${className}`}
+      className={`bg-boxes rounded-xl flex items-center justify-center ${className}`}
     >
       {children}
     </div>

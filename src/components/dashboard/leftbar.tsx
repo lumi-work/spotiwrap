@@ -7,8 +7,8 @@ import SignOut from "@/components/dashboard/sign-out";
 
 function Leftbar() {
   return (
-    <div className="w-full h-full">
-      <div className="flex flex-col items-center justify-center h-screen text-center py-6">
+    <div className="w-full h-full p-4">
+      <div className="flex flex-col items-center justify-center h-full text-center bg-boxes rounded-xl">
         <div>
           <Image
             src={Logo}
@@ -19,10 +19,10 @@ function Leftbar() {
             className="w-auto h-auto"
           />
         </div>
-        <div className="flex items-center justify-center h-screen">
+        <div className="flex items-center justify-center h-full">
           <MenuItems />
         </div>
-        <div className="flex items-end justify-between h-screen w-full px-6">
+        <div className="flex items-end justify-between h-full w-full px-6 mb-4">
           <div>
             <UserInfortmation />
           </div>
