@@ -5,8 +5,8 @@ import React from "react";
 
 function changelogPage() {
   return (
-    <div className="flex items-center justify-center w-full h-full">
-      <div className="max-w-[1600px] w-full flex flex-col items-center justify-center">
+    <div className="flex items-center justify-center w-full min-h-screen">
+      <div className="max-w-[1600px] w-full flex flex-col items-center">
         <Navbar />
         <TimelineOverview />
         <Footer />

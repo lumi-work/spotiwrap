@@ -8,13 +8,15 @@ function Footer() {
       <div className="flex-col items-center justify-center pt-12">
         <div className="flex items-center justify-around">
           <div className="flex-col items-center w-64">
-            <Image
-              src={Logo}
-              alt="logo"
-              width={200}
-              height={200}
-              className="w-auto h-auto"
-            />
+            <div
+              className="
+            flex items-center"
+            >
+              <Image src={Logo} alt="logo" width={70} height={70} />
+              <h2 className="text-white font-semibold text-xl ml-5">
+                Spotiwrap
+              </h2>
+            </div>
             <p className="text-neutral-400 pt-5">
               Discover the music that defined your year with a personalized
               experience created just for you.

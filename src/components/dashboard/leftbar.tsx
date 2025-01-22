@@ -9,15 +9,9 @@ function Leftbar() {
   return (
     <div className="w-full h-full p-4">
       <div className="flex flex-col items-center justify-center h-full text-center bg-boxes rounded-xl">
-        <div>
-          <Image
-            src={Logo}
-            alt="logo"
-            width={180}
-            height={180}
-            priority
-            className="w-auto h-auto"
-          />
+        <div className="flex items-center w-full justify-center gap-4 mt-5">
+          <Image src={Logo} alt="logo" width={50} height={50} priority />
+          <h2 className="text-white font-semibold text-xl">Spotiwrap</h2>
         </div>
         <div className="flex items-center justify-center h-full">
           <MenuItems />
