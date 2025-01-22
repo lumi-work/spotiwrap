@@ -10,7 +10,8 @@ export default {
   	extend: {
   		colors: {
   			background: '#121212',
-  			secondary: '#1ED760'
+  			secondary: '#1ED760',
+			boxes: "#161616"
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
