@@ -1,19 +1,22 @@
 import { storeState } from "@/types/storeState";
 import { fetchAccessToken } from "@/utils/fetch/auth";
+import { fetchSpotifyUserId } from "@/utils/fetch/user";
 import { create } from "zustand";
 
-export const topItemsStore = create<storeState>((set) => ({
+export const getUserProfile = create<storeState>((set) => ({
   data: [],
   loading: false,
   error: null,
 
-  fetchData: async (type: string = "tracks", term: string = "short_term") => {
+  fetchData: async () => {
     set({ loading: true, error: null });
     try {
       const token = await fetchAccessToken();
+      const user_id = await fetchSpotifyUserId(token)
       if (!token) throw new Error("No access token available");
+      if (!user_id) throw new Error("No access userId available")
       const response = await fetch(
-        `https://api.spotify.com/v1/me/top/${type}?time_range=${term}&limit=5`,
+        `https://api.spotify.com/v1/users/${user_id}`,
         {
           method: "GET",
           headers: {
@@ -24,11 +27,11 @@ export const topItemsStore = create<storeState>((set) => ({
       );
 
       if (!response.ok) {
-        throw new Error(`Failed to fetch user top items: ${response.status}`);
+        throw new Error(`Failed to fetch user profile: ${response.status}`);
       }
 
       const data = await response.json();
-      set({ data, loading: false }); 
+      set({ data, loading: false });
     } catch (error: any) {
       set({ error: error.message, loading: false }); 
     }
