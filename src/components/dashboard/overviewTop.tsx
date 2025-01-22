@@ -93,32 +93,34 @@ function OverviewTop() {
           </div>
           <div className="flex flex-col items-start">
             <div>
-              <h2 className="font-semibold text-lg flex items-start justify-start pl-4">
+              <h2 className="font-semibold text-lg flex items-start justify-start mt-2">
                 Playlists ({playlistData?.items?.length})
               </h2>
             </div>
-            <div className="grid grid-cols-3 gap-4 p-4">
+            <div className="grid grid-cols-3 gap-x-10 gap-y-6 mt-3 mb-5">
               {playlistData && playlistData?.items?.length > 0 ? (
                 playlistData.items.slice(0, 5).map((item: any) => (
                   <div key={item.id} className="hover:opacity-55">
-                    <Image
-                      src={
-                        item?.images?.[0]?.url
-                          ? item.images[0].url
-                          : "https://dummyimage.com/150x150"
-                      }
-                      width={120}
-                      height={120}
-                      alt="playlist-picture"
-                      className="rounded-xl"
-                    />
+                    <div className="w-24 h-24 rounded-xl overflow-hidden flex items-center justify-center">
+                      <Image
+                        src={
+                          item?.images?.[0]?.url
+                            ? item.images[0].url
+                            : "https://dummyimage.com/150x150"
+                        }
+                        width={120}
+                        height={120}
+                        alt="playlist-picture"
+                        className="object-cover"
+                      />
+                    </div>
                   </div>
                 ))
               ) : (
                 <div>You don't have any playlists.</div>
               )}
               <Link href={"/dashboard/playlists"}>
-                <div className="hover:opacity-55 w-full h-full rounded-xl flex items-center justify-center text-3xl bg-background opacity-50">
+                <div className="hover:opacity-55 w-24 h-24 rounded-xl flex items-center justify-center text-3xl bg-background opacity-50">
                   +
                 </div>
               </Link>
