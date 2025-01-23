@@ -33,14 +33,14 @@ const UserTopItems = () => {
     <div className="m-2 rounded-lg">
       {data?.items ? (
         <>
-          <h2 className="font-semibold text-xl text-white p-4">
+          <h2 className="font-semibold text-lg text-white p-4">
             Most Listened (5)
           </h2>
           <div className="space-y-4">
             {data.items.map((item: any, index: number) => (
               <div
                 key={item.name}
-                className="flex items-center gap-4 p-6 rounded-lg bg-neutral-800/50 hover:bg-neutral-700 transition-all duration-200"
+                className="flex items-center gap-4 p-6 rounded-lg bg-neutral-800/20 hover:bg-neutral-700 transition-all duration-200"
               >
                 <Image
                   src={item.album.images[0].url}
