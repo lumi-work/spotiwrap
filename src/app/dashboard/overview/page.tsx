@@ -1,4 +1,5 @@
 import Boxes from "@/components/dashboard/boxes";
+import OverviewMiddle from "@/components/dashboard/overviewMiddle";
 import OverviewTop from "@/components/dashboard/overviewTop";
 import UserTopItems from "@/components/dashboard/user-top-items";
 import { Toaster } from "react-hot-toast";
@@ -13,7 +14,7 @@ export default function OverviewPage() {
       </Boxes>
 
       <Boxes className="row-span-1 col-span-1 h-full">
-        <h2>Ortadaki Box</h2>
+        <OverviewMiddle />
       </Boxes>
 
       <Boxes className="row-span-1 col-span-1 h-full">

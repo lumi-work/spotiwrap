@@ -5,7 +5,7 @@ import { create } from "zustand";
 
 export const getUserProfile = create<storeState>((set) => ({
   data: [],
-  loading: false,
+  loading: true,
   error: null,
 
   fetchData: async () => {
