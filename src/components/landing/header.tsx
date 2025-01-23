@@ -8,7 +8,7 @@ function Header() {
   return (
     <div className="flex items-start justify-around w-full h-full my-32">
       <div className="flex-col items-center justify-center text-neutral-100">
-        <div className="flex items-center gap-2 border border-neutral-600 rounded-xl px-3 py-0.5 w-fit">
+        <div className="flex items-center gap-2 border border-green-600 rounded-xl px-3 py-0.5 w-fit shadow-xl">
           <p className="font-normal text-sm text-neutral-200">
             Discover the tracks that defined your year! 🚀
           </p>

@@ -2,6 +2,7 @@
 
 import { FaMicrophone } from "react-icons/fa";
 import { RiFlashlightFill } from "react-icons/ri";
+import { GiRocketFlight } from "react-icons/gi";
 
 import { PricingSection } from "@/components/ui/pricing-section";
 
@@ -75,6 +76,42 @@ const defaultTiers = [
       {
         name: "Year-over-Year Comparisons",
         description: "Compare your yearly stats.",
+        included: true,
+      },
+    ],
+  },
+  {
+    name: "Business",
+    price: {
+      monthly: 50,
+      yearly: 500,
+    },
+    description: "For teams and businesses that want to scale.",
+    badge: "For Teams",
+    icon: (
+      <div className="relative">
+        <GiRocketFlight className="w-7 h-7 relative z-10 text-blue-500" />
+      </div>
+    ),
+    features: [
+      {
+        name: "Team Insights",
+        description: "Analyze multiple users' data at once.",
+        included: true,
+      },
+      {
+        name: "Custom Reporting",
+        description: "Get tailored reports for your team.",
+        included: true,
+      },
+      {
+        name: "Advanced Visualizations",
+        description: "Access high-end visual reports.",
+        included: true,
+      },
+      {
+        name: "Priority Support",
+        description: "Get dedicated customer support.",
         included: true,
       },
     ],

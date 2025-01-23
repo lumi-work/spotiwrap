@@ -8,10 +8,13 @@ import {
 
 const Accordions = () => {
   return (
-    <div className="max-w-3xl mx-auto p-6">
+    <div className="max-w-3xl mx-auto p-6 bg-neutral-900 rounded-lg">
+      <h1 className="flex items-center justify-center w-full text-white text-3xl mb-5 font-bold">
+        What is Wrapped?
+      </h1>
       <Accordion className="text-neutral-200">
         <Tab>
-          <Trigger>What is Spotify Wrapped App?</Trigger>
+          <Trigger className="">What is Spotify </Trigger>
           <Content className="text-neutral-400">
             Spotify Wrapped App is a personalized platform created by Lumi.Work
             that allows you to explore your yearly music journey, highlighting
