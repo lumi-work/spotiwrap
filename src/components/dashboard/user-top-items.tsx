@@ -38,7 +38,7 @@ const UserTopItems = () => {
             {data.items.map((item: any, index: number) => (
               <div
                 key={item.name}
-                className="flex items-center gap-4 p-6 rounded-lg bg-neutral-800/20 hover:bg-neutral-700 transition-all duration-200"
+                className="flex items-center gap-4 p-3 rounded-lg bg-neutral-800/20 hover:bg-neutral-700 transition-all duration-200"
               >
                 <Image
                   src={item.album.images[0].url}
@@ -49,7 +49,7 @@ const UserTopItems = () => {
                 />
                 <div className="flex-1">
                   <p className="text-lg font-medium text-white truncate">
-                    {index + 1}. {item.name.slice(0, 15) || "Unknown Name"}
+                    {index + 1}. {item.name.slice(0, 24) || "Unknown Name"}
                   </p>
                   <p className="text-sm text-neutral-400">
                     {item.artists?.[0]?.name || "Unknown Artist"}
