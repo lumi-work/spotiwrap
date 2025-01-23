@@ -2,12 +2,12 @@ import { storeState } from "@/types/storeState";
 import { fetchAccessToken } from "@/utils/fetch/auth";
 import { create } from "zustand";
 
-export const topItemsStore = create<storeState>((set) => ({
+export const getUserTopArtists = create<storeState>((set) => ({
   data: [],
   loading: true,
   error: null,
 
-  fetchData: async (type: string = "tracks", term: string = "short_term", limit: number = 5) => {
+  fetchData: async (type: string = "artists", term: string = "medium_term", limit: number = 12) => {
     set({ loading: true, error: null });
     try {
       const token = await fetchAccessToken();
