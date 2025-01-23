@@ -81,12 +81,12 @@ const defaultTiers = [
     ],
   },
   {
-    name: "Business",
+    name: "Enterprise",
     price: {
       monthly: 50,
       yearly: 500,
     },
-    description: "For teams and businesses that want to scale.",
+    description: "Comprehensive solutions for organizations and teams.",
     badge: "For Teams",
     icon: (
       <div className="relative">
@@ -95,23 +95,23 @@ const defaultTiers = [
     ),
     features: [
       {
-        name: "Team Insights",
-        description: "Analyze multiple users' data at once.",
+        name: "Multi-User Insights",
+        description: "Analyze data across entire organizations.",
         included: true,
       },
       {
         name: "Custom Reporting",
-        description: "Get tailored reports for your team.",
+        description: "Create tailored, in-depth reports.",
         included: true,
       },
       {
         name: "Advanced Visualizations",
-        description: "Access high-end visual reports.",
+        description: "Generate comprehensive visual analytics.",
         included: true,
       },
       {
-        name: "Priority Support",
-        description: "Get dedicated customer support.",
+        name: "Dedicated Support",
+        description: "24/7 priority customer assistance.",
         included: true,
       },
     ],
