@@ -27,8 +27,6 @@ const UserTopItems = () => {
     toast.error(error);
   }
 
-  console.log(data);
-
   return (
     <div className="m-2 rounded-lg">
       {data?.items ? (

@@ -11,7 +11,8 @@ function LoginButton({ text }: { text: string }) {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "spotify",
       options: {
-        scopes: "user-top-read playlist-read-private user-read-email",
+        scopes:
+          "user-top-read playlist-read-private user-read-email user-read-recently-played",
         redirectTo: `${window.location.origin}/auth/callback?next=/dashboard/overview`,
       },
     });

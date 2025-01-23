@@ -2,12 +2,13 @@
 
 import { getUserProfile } from "@/stores/getUserProfile";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { MdArrowOutward } from "react-icons/md";
 import Skeleton from "@/components/dashboard/skeleton";
 import toast from "react-hot-toast";
 import Link from "next/link";
 import { playlistStore } from "@/stores/playlistSlice";
+import { getRecentlyPlayed } from "@/stores/getRecentlyPlayed";
 
 function OverviewTop() {
   const { data, loading, error, fetchData } = getUserProfile();
@@ -18,6 +19,13 @@ function OverviewTop() {
     fetchData: playlistFetchdata,
   } = playlistStore();
 
+  const {
+    data: recentlyData,
+    loading: recentlyLoading,
+    error: recentlyError,
+    fetchData: recentlyFetchData,
+  } = getRecentlyPlayed();
+
   useEffect(() => {
     const fetchUserProfile = async () => {
       await fetchData();
@@ -27,21 +35,47 @@ function OverviewTop() {
       await playlistFetchdata();
     };
 
+    const fetchRecentlyPlayed = async () => {
+      await recentlyFetchData();
+    };
     fetchUserProfile();
     fetchUserPlaylists();
-  }, [fetchData, playlistFetchdata]);
+    fetchRecentlyPlayed();
+  }, [fetchData, playlistFetchdata, recentlyFetchData]);
 
-  if (loading || playlistLoading) {
-    return <Skeleton className="w-full h-full" />;
+  if (loading || playlistLoading || recentlyLoading) {
+    <Skeleton className="w-full h-full" />;
   }
 
-  if (error || playlistError) {
+  if (error || playlistError || recentlyError) {
     toast.error(error);
   }
 
+  const [totalDurationMinutes, setTotalDurationMinutes] = useState(0);
+
+  const calculateDurationMinutes = (recentlyItems: any[]) => {
+    if (!recentlyItems || recentlyItems.length === 0) {
+      return 0;
+    }
+
+    const totalMinutes = recentlyItems.reduce(
+      (total, item) => total + (item.track?.duration_ms || 0) / 1000 / 60,
+      0
+    );
+
+    return Math.floor(totalMinutes);
+  };
+
+  useEffect(() => {
+    if (recentlyData?.items) {
+      const totalMinutes = calculateDurationMinutes(recentlyData.items);
+      setTotalDurationMinutes(totalMinutes);
+    }
+  }, [recentlyData]);
+
   return (
     <div className="w-full text-white p-4 rounded-lg">
-      {data && playlistData ? (
+      {data && playlistData && recentlyData ? (
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between">
           <div className="flex flex-col items-center md:items-start gap-4 ml-10">
             <div className="flex items-center gap-4">
@@ -74,22 +108,30 @@ function OverviewTop() {
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
-              <div className="bg-neutral-800/20 backdrop-blur-md px-12 h-20 flex flex-col items-center justify-center rounded-xl shadow-lg transition-transform transform hover:scale-105">
-                <p className="text-sm text-neutral-400">Music Playing</p>
-                <p className="text-xl font-bold text-secondary mt-2">
-                  +1.548 h/s
+              <div className="px-12 h-20 flex flex-col items-center justify-center bg-neutral-800/20 rounded-xl">
+                <p className="text-sm text-neutral-400">Listening Time</p>
+                <div className="text-lg font-semibold text-secondary mt-2">
+                  {totalDurationMinutes !== 0 ? (
+                    <p>+{totalDurationMinutes} Minute</p>
+                  ) : (
+                    0
+                  )}
+                </div>
+              </div>
+              <div className="px-12 h-20 flex flex-col items-center justify-center bg-neutral-800/20 rounded-xl">
+                <p className="text-sm text-neutral-400">Last Track</p>
+                <p className="text-lg font-semibold text-secondary mt-2">
+                  {recentlyData.items
+                    ? recentlyData?.items[0]?.track?.name?.slice(0, 20)
+                    : "Null"}
                 </p>
               </div>
-              <div className="bg-neutral-800/20 backdrop-blur-md px-12 h-20 flex flex-col items-center justify-center rounded-xl shadow-lg transition-transform transform hover:scale-105">
-                <p className="text-sm text-neutral-400">Weekly</p>
-                <p className="text-xl font-bold text-secondary mt-2">
-                  +8 hours
-                </p>
-              </div>
-              <div className="bg-neutral-800/20 backdrop-blur-md px-12 h-20 flex flex-col items-center justify-center rounded-xl shadow-lg transition-transform transform hover:scale-105">
-                <p className="text-sm text-neutral-400">Liked Playlist</p>
-                <p className="text-xl font-bold text-secondary mt-2">
-                  +25 liked
+              <div className="px-12 h-20 flex flex-col items-center justify-center bg-neutral-800/20 rounded-xl">
+                <p className="text-sm text-neutral-400">Playlist</p>
+                <p className="text-lg font-semibold text-secondary mt-2">
+                  {playlistData && playlistData?.items?.length > 0
+                    ? playlistData?.items?.length
+                    : 0}
                 </p>
               </div>
             </div>

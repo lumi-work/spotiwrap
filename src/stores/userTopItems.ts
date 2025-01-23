@@ -4,7 +4,7 @@ import { create } from "zustand";
 
 export const topItemsStore = create<storeState>((set) => ({
   data: [],
-  loading: false,
+  loading: true,
   error: null,
 
   fetchData: async (type: string = "tracks", term: string = "short_term") => {
