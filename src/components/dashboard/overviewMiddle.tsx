@@ -30,7 +30,7 @@ function OverviewMiddle() {
   return (
     <div>
       {data && data?.items ? (
-        <h2 className="font-semibold text-lg ml-6">Your Top Artists</h2>
+        <h2 className="font-semibold text-lg ml-6 mt-2">Your Top Artists</h2>
       ) : null}
       <div className="grid grid-cols-6 gap-6 p-4">
         {data && data?.items
