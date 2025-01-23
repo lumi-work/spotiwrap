@@ -39,88 +39,93 @@ function OverviewTop() {
     toast.error(error);
   }
 
-  console.log(data);
-
   return (
-    <div className="w-full">
+    <div className="w-full bg-neutral-900 text-white p-4 rounded-lg shadow-lg">
       {data && playlistData ? (
-        <div className="flex items-center justify-between w-full px-24">
-          <div className="flex flex-col items-center justify-center w-full">
-            <div className="flex items-center justify-start w-full gap-4">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between">
+          <div className="flex flex-col items-center md:items-start gap-4 ml-10">
+            <div className="flex items-center gap-4">
               <Image
                 src={
                   data?.images?.[0]?.url
                     ? data.images[0].url
                     : "https://dummyimage.com/150x150"
                 }
-                width={65}
-                height={65}
+                width={75}
+                height={75}
                 alt="user-image"
-                priority
-                className="w-auto h-auto rounded-full border-2 border-secondary"
+                className="rounded-full border-2 border-secondary shadow-md"
               />
-
-              <div className="flex-col">
+              <div className="flex flex-col">
                 <Link
                   href={data?.external_urls?.spotify || "/"}
                   target="_blank"
+                  className="group"
                 >
-                  <p className="font-semibold text-lg flex items-center gap-1 group hover:text-secondary hover:cursor-pointer">
-                    @{data?.display_name}{" "}
-                    <MdArrowOutward className="text-2xl hidden group-hover:block" />
+                  <p className="text-xl font-bold flex items-center gap-2">
+                    @{data?.display_name}
+                    <MdArrowOutward className="text-lg group-hover:scale-125 transition-transform duration-200" />
                   </p>
                 </Link>
-                <p className="text-sm text-neutral-400">Id : {data?.id}</p>
-                <h3 className="text-neutral-300 mt-2">
+                <p className="text-sm text-neutral-400">ID: {data?.id}</p>
+                <p className="text-sm text-neutral-400 mt-1">
                   Followers: {data?.followers?.total}
-                </h3>
+                </p>
               </div>
             </div>
-            <div className="flex items-center justify-start w-full pt-16 gap-24">
-              <div className="flex flex-col items-center justify-center">
-                <div className="text-lg font-semibold">Music Playing</div>
-                <div className="text-secondary pt-2">+1.548 h/s</div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-6">
+              <div className="bg-neutral-800 bg-opacity-80 backdrop-blur-md p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+                <p className="text-sm text-neutral-400">Music Playing</p>
+                <p className="text-2xl font-bold text-secondary mt-2">
+                  +1.548 h/s
+                </p>
               </div>
-              <div className="flex flex-col items-center justify-center">
-                <div className="text-lg font-semibold">Weekly</div>
-                <div className="text-secondary pt-2">+8 hours</div>
+              <div className="bg-neutral-800 bg-opacity-80 backdrop-blur-md p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+                <p className="text-sm text-neutral-400">Weekly</p>
+                <p className="text-2xl font-bold text-secondary mt-2">
+                  +8 hours
+                </p>
               </div>
-              <div className="flex flex-col items-center justify-center">
-                <div className="text-lg font-semibold">Liked Playlist</div>
-                <div className="text-secondary pt-2">+25 liked</div>
+              <div className="bg-neutral-800 bg-opacity-80 backdrop-blur-md p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+                <p className="text-sm text-neutral-400">Liked Playlist</p>
+                <p className="text-2xl font-bold text-secondary mt-2">
+                  +25 liked
+                </p>
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-start">
-            <div>
-              <h2 className="font-semibold text-lg flex items-start justify-start mt-2">
-                Playlists ({playlistData?.items?.length})
-              </h2>
-            </div>
-            <div className="grid grid-cols-3 gap-x-10 gap-y-6 mt-3 mb-5">
+
+          <div className="mt-10 md:mt-0 mr-5">
+            <h2 className="text-xl font-semibold">
+              Playlists ({playlistData?.items?.length})
+            </h2>
+            <div className="grid grid-cols-3 gap-6 mt-4">
               {playlistData && playlistData?.items?.length > 0 ? (
                 playlistData.items.slice(0, 5).map((item: any) => (
-                  <div key={item.id} className="hover:opacity-55">
-                    <div className="w-24 h-24 rounded-xl overflow-hidden flex items-center justify-center">
-                      <Image
-                        src={
-                          item?.images?.[0]?.url
-                            ? item.images[0].url
-                            : "https://dummyimage.com/150x150"
-                        }
-                        width={120}
-                        height={120}
-                        alt="playlist-picture"
-                        className="object-cover"
-                      />
-                    </div>
+                  <div
+                    key={item.id}
+                    className="w-24 h-24 bg-neutral-800 rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-200"
+                  >
+                    <Image
+                      src={
+                        item?.images?.[0]?.url
+                          ? item.images[0].url
+                          : "https://dummyimage.com/150x150"
+                      }
+                      width={96}
+                      height={96}
+                      alt="playlist-picture"
+                      className="object-cover"
+                    />
                   </div>
                 ))
               ) : (
-                <div>You don't have any playlists.</div>
+                <p className="text-sm text-neutral-400">
+                  You don't have any playlists.
+                </p>
               )}
               <Link href={"/dashboard/playlists"}>
-                <div className="hover:opacity-55 w-24 h-24 rounded-xl flex items-center justify-center text-3xl bg-background opacity-50">
+                <div className="w-24 h-24 bg-neutral-800 rounded-xl flex items-center justify-center text-3xl text-neutral-400 hover:bg-neutral-700 transition-colors">
                   +
                 </div>
               </Link>
