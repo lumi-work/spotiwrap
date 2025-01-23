@@ -69,7 +69,7 @@ export function PricingSection({ tiers, className }: PricingSectionProps) {
         className
       )}
     >
-      <div className="w-full max-w-7xl mx-auto ">
+      <div className="w-full max-w-7xl mx-auto">
         <div className="flex flex-col items-center gap-4 mb-12">
           <h2 className="text-3xl font-bold text-neutral-50 dark:text-zinc-50">
             Unlock the Full Potential of Your Music Insights
@@ -98,7 +98,7 @@ export function PricingSection({ tiers, className }: PricingSectionProps) {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {tiers.map((tier) => (
             <div
               key={tier.name}
