@@ -3,8 +3,10 @@
 import { topItemsStore } from "@/stores/userTopItems";
 import React, { useEffect } from "react";
 import Skeleton from "@/components/dashboard/skeleton";
+import { FaLink } from "react-icons/fa";
 import toast from "react-hot-toast";
 import Image from "next/image";
+import Link from "next/link";
 
 const UserTopItems = () => {
   const { data, loading, error, fetchData } = topItemsStore();
@@ -25,18 +27,20 @@ const UserTopItems = () => {
     toast.error(error);
   }
 
+  console.log(data);
+
   return (
-    <div className="ml-3 bg-neutral-900 p-6 rounded-lg shadow-md">
+    <div className="m-2 rounded-lg">
       {data?.items ? (
         <>
-          <h2 className="font-semibold text-2xl text-white pb-4 border-b border-neutral-700 mb-4">
-            🎧 Most Listened
+          <h2 className="font-semibold text-lg text-white p-4">
+            Most Listened (5)
           </h2>
           <div className="space-y-4">
             {data.items.map((item: any, index: number) => (
               <div
                 key={item.name}
-                className="flex items-center gap-4 p-3 rounded-lg bg-neutral-800 hover:bg-neutral-700 transition-all duration-200"
+                className="flex items-center gap-4 p-6 rounded-lg bg-neutral-800/20 hover:bg-neutral-700 transition-all duration-200"
               >
                 <Image
                   src={item.album.images[0].url}

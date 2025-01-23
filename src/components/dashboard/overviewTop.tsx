@@ -40,7 +40,7 @@ function OverviewTop() {
   }
 
   return (
-    <div className="w-full bg-neutral-900 text-white p-4 rounded-lg shadow-lg">
+    <div className="w-full text-white p-4 rounded-lg">
       {data && playlistData ? (
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between">
           <div className="flex flex-col items-center md:items-start gap-4 ml-10">
@@ -62,7 +62,7 @@ function OverviewTop() {
                   target="_blank"
                   className="group"
                 >
-                  <p className="text-xl font-bold flex items-center gap-2">
+                  <p className="text-xl font-semibold flex items-center gap-2">
                     @{data?.display_name}
                     <MdArrowOutward className="text-lg group-hover:scale-125 transition-transform duration-200" />
                   </p>
@@ -73,22 +73,22 @@ function OverviewTop() {
                 </p>
               </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-6">
-              <div className="bg-neutral-800 bg-opacity-80 backdrop-blur-md p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
+              <div className="bg-neutral-800/20 backdrop-blur-md px-12 h-20 flex flex-col items-center justify-center rounded-xl shadow-lg transition-transform transform hover:scale-105">
                 <p className="text-sm text-neutral-400">Music Playing</p>
-                <p className="text-2xl font-bold text-secondary mt-2">
+                <p className="text-xl font-bold text-secondary mt-2">
                   +1.548 h/s
                 </p>
               </div>
-              <div className="bg-neutral-800 bg-opacity-80 backdrop-blur-md p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+              <div className="bg-neutral-800/20 backdrop-blur-md px-12 h-20 flex flex-col items-center justify-center rounded-xl shadow-lg transition-transform transform hover:scale-105">
                 <p className="text-sm text-neutral-400">Weekly</p>
-                <p className="text-2xl font-bold text-secondary mt-2">
+                <p className="text-xl font-bold text-secondary mt-2">
                   +8 hours
                 </p>
               </div>
-              <div className="bg-neutral-800 bg-opacity-80 backdrop-blur-md p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105">
+              <div className="bg-neutral-800/20 backdrop-blur-md px-12 h-20 flex flex-col items-center justify-center rounded-xl shadow-lg transition-transform transform hover:scale-105">
                 <p className="text-sm text-neutral-400">Liked Playlist</p>
-                <p className="text-2xl font-bold text-secondary mt-2">
+                <p className="text-xl font-bold text-secondary mt-2">
                   +25 liked
                 </p>
               </div>
@@ -96,7 +96,7 @@ function OverviewTop() {
           </div>
 
           <div className="mt-10 md:mt-0 mr-5">
-            <h2 className="text-xl font-semibold">
+            <h2 className="text-lg font-semibold">
               Playlists ({playlistData?.items?.length})
             </h2>
             <div className="grid grid-cols-3 gap-6 mt-4">
