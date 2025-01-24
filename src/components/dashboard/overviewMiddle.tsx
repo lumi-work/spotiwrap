@@ -25,8 +25,6 @@ function OverviewMiddle() {
     toast.error(error);
   }
 
-  console.log(data);
-
   return (
     <div>
       {data && data?.items ? (
