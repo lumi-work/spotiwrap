@@ -1,12 +1,11 @@
-import Boxes from "@/components/dashboard/boxes";
-import { Toaster } from "react-hot-toast";
+import Playlists from "@/components/dashboard/playlists";
 
 export default function PlaylistsPage() {
   return (
     <div className="w-full h-screen p-4 overflow-hidden">
-      <Toaster />
-
-      <Boxes className="w-full h-full overflow-auto">1</Boxes>
+      <div className="w-full h-full overflow-auto bg-boxes rounded-xl">
+        <Playlists />
+      </div>
     </div>
   );
 }

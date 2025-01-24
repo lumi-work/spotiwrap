@@ -1,6 +1,7 @@
 import Leftbar from "@/components/dashboard/leftbar";
 import { redirect } from "next/navigation";
 import { createClient } from "@/utils/supabase/server";
+import { Toaster } from "react-hot-toast";
 
 export default async function RootLayout({
   children,
@@ -15,6 +16,7 @@ export default async function RootLayout({
   }
   return (
     <div className="flex items-center justify-center h-full w-full text-white">
+      <Toaster />
       <div className="flex-shrink-0 flex-grow-0 basis-[15%] max-w-[15%] h-screen">
         <Leftbar />
       </div>
