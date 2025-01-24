@@ -27,8 +27,6 @@ function Playlists() {
     toast.error(error);
   }
 
-  console.log(data);
-
   return (
     <div className="p-8">
       {data && data?.items ? (
