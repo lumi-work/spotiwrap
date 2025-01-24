@@ -12,7 +12,7 @@ function LoginButton({ text }: { text: string }) {
       provider: "spotify",
       options: {
         scopes:
-          "user-top-read playlist-read-private user-read-email user-read-recently-played",
+          "user-top-read playlist-read-private user-read-email user-read-recently-played user-library-read user-read-playback-position",
         redirectTo: `${window.location.origin}/auth/callback?next=/dashboard/overview`,
       },
     });

@@ -20,7 +20,7 @@ const UserTopItems = () => {
   }, [fetchData]);
 
   if (loading) {
-    return <Skeleton className="w-full h-full" />;
+    <Skeleton className="w-full h-full" />;
   }
 
   if (error) {

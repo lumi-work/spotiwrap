@@ -27,8 +27,8 @@ const menuItems = [
         isPremium: false,
       },
       {
-        path: "/tracks",
-        label: "Tracks",
+        path: "/episode",
+        label: "Episode",
         icon: <BsMusicNoteList className="text-xl" />,
         isPremium: false,
       },
