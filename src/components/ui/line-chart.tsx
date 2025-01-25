@@ -82,6 +82,10 @@ function LineChart() {
           responsive: true,
           maintainAspectRatio: false,
           plugins: {
+            title: {
+              display: true,
+              text: "Top 15 Populerity",
+            },
             legend: {
               display: true,
               position: "top",
