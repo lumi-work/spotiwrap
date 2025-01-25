@@ -22,7 +22,7 @@ const Accordions = () => {
           </Content>
         </Tab>
         <Tab>
-          <Trigger>Is Spotify Wrapped App free?</Trigger>
+          <Trigger>Is Spotiwrap free?</Trigger>
           <Content className="text-neutral-400">
             Yes, Spotify Wrapped App is completely free to use. Simply connect
             your Spotify account and start exploring your personalized insights.
@@ -37,7 +37,7 @@ const Accordions = () => {
           </Content>
         </Tab>
         <Tab>
-          <Trigger>Does Spotify Wrapped App store my data?</Trigger>
+          <Trigger>Does Spotiwrap store my data?</Trigger>
           <Content className="text-neutral-400">
             Your privacy is our priority. Spotify Wrapped App temporarily
             accesses your listening data to generate your summary, but we do not
