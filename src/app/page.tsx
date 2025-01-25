@@ -1,5 +1,6 @@
 import Accordions from "@/components/landing/accordion";
 import Footer from "@/components/landing/footer";
+import Grids from "@/components/landing/grids";
 import Header from "@/components/landing/header";
 import Navbar from "@/components/landing/navbar";
 import { PricingSections } from "@/components/landing/pricing";
@@ -12,6 +13,7 @@ export default function Home() {
         <div className="max-w-[1600px] w-full flex flex-col items-center justify-center">
           <Navbar />
           <Header />
+          <Grids />
           <PricingSections />
           <Accordions />
           <Footer />
