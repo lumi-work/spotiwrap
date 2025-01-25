@@ -64,7 +64,7 @@ const menuItems = [
         path: "/profile",
         label: "Profile",
         icon: <LuCircleUser className="text-xl" />,
-        isPremium: false,
+        isPremium: true,
       },
       {
         path: "/settings",
