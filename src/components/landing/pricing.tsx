@@ -80,42 +80,6 @@ const defaultTiers = [
       },
     ],
   },
-  {
-    name: "Enterprise",
-    price: {
-      monthly: 50,
-      yearly: 500,
-    },
-    description: "Comprehensive solutions for organizations and teams.",
-    badge: "For Teams",
-    icon: (
-      <div className="relative">
-        <GiRocketFlight className="w-7 h-7 relative z-10 text-blue-500" />
-      </div>
-    ),
-    features: [
-      {
-        name: "Multi-User Insights",
-        description: "Analyze data across entire organizations.",
-        included: true,
-      },
-      {
-        name: "Custom Reporting",
-        description: "Create tailored, in-depth reports.",
-        included: true,
-      },
-      {
-        name: "Advanced Visualizations",
-        description: "Generate comprehensive visual analytics.",
-        included: true,
-      },
-      {
-        name: "Dedicated Support",
-        description: "24/7 priority customer assistance.",
-        included: true,
-      },
-    ],
-  },
 ];
 
 function PricingSections() {

@@ -98,7 +98,7 @@ export function PricingSection({ tiers, className }: PricingSectionProps) {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {tiers.map((tier) => (
             <div
               key={tier.name}
