@@ -25,13 +25,13 @@ function Tables() {
     toast.error(error);
   }
 
-  console.log(data);
-
   return (
     <div>
       {data && data?.items ? (
         <div className="overflow-x-auto p-4">
-          <h2 className="font-semibold text-lg pb-6 pt-1">Your Top Tracks</h2>
+          <h2 className="font-semibold text-lg pb-6 pt-1">
+            Your Top Tracks (50)
+          </h2>
           <table className="table-auto w-full text-left border-collapse rounded-xl overflow-hidden">
             <thead className="bg-green-600">
               <tr>
