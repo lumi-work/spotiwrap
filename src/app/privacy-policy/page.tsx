@@ -42,7 +42,7 @@ function Page() {
               rel="noopener noreferrer"
               className="text-green-500 underline"
             >
-              Spotify's Privacy Policy
+              Spotifys Privacy Policy
             </a>{" "}
             for more information.
           </p>
