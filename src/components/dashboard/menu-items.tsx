@@ -66,12 +66,6 @@ const menuItems = [
         icon: <LuCircleUser className="text-xl" />,
         isPremium: true,
       },
-      {
-        path: "/settings",
-        label: "Settings",
-        icon: <IoIosSettings className="text-xl" />,
-        isPremium: false,
-      },
     ],
   },
 ];
