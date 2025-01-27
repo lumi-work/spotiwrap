@@ -5,97 +5,84 @@ import { Timeline } from "@/components/ui/timeline-items";
 export function TimelineOverview() {
   const data = [
     {
-      title: "2024",
-      content: (
-        <div>
-          <p className="text-neutral-200 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Built and launched Aceternity UI and Aceternity UI Pro from scratch
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src="https://assets.aceternity.com/templates/startup-1.webp"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="https://assets.aceternity.com/templates/startup-2.webp"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="https://assets.aceternity.com/templates/startup-3.webp"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="https://assets.aceternity.com/templates/startup-4.webp"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "Early 2023",
-      content: (
-        <div>
-          <p className="text-neutral-200 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            I usually run out of copy, but when I see content this big, I try to
-            integrate lorem ipsum.
-          </p>
-          <p className="text-neutral-200 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Lorem ipsum is for people who are too lazy to write copy. But we are
-            not. Here are some more example of beautiful designs I built.
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src="https://assets.aceternity.com/pro/hero-sections.png"
-              alt="hero template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="https://assets.aceternity.com/features-section.png"
-              alt="feature template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="https://assets.aceternity.com/pro/bento-grids.png"
-              alt="bento template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="https://assets.aceternity.com/cards.png"
-              alt="cards template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-          </div>
-        </div>
-      ),
-    },
-    {
       title: "Dec 1, 2024",
       content: (
         <div>
-          <p className="text-neutral-200 dark:text-neutral-200 text-lg md:text-lg font-normal mb-4">
-            Initial repository created, marking the beginning of project
-            planning and development.
+          <p className="text-neutral-400 dark:text-neutral-400 text-xl md:text-lg font-normal mb-4">
+            Project initialized. Basic structure and planning for development
+            were set up.
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "Dec 8, 2024",
+      content: (
+        <div>
+          <p className="text-neutral-400 dark:text-neutral-400 text-xl md:text-lg font-normal mb-8">
+            Integrated Spotify API to fetch user data and playlist information.
+            Basic API setup completed.
+          </p>
+          <p className="text-neutral-400 dark:text-neutral-400 text-xl md:text-lg font-normal mb-8">
+            Implemented user authentication and authorization flow. Users can
+            now securely log in.
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "Dec 15, 2024",
+      content: (
+        <div>
+          <p className="text-neutral-400 dark:text-neutral-400 text-xl md:text-lg font-normal mb-8">
+            Designed and developed the user interface. Basic components and
+            pages were created.
+          </p>
+          <p className="text-neutral-400 dark:text-neutral-400 text-xl md:text-lg font-normal mb-8">
+            Added functionality to display users' top tracks and artists.
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "Dec 22, 2024",
+      content: (
+        <div>
+          <p className="text-neutral-400 dark:text-neutral-400 text-xl md:text-lg font-normal mb-8">
+            Improved error handling and user feedback mechanisms. Enhanced
+            overall stability and user experience.
+          </p>
+          <p className="text-neutral-400 dark:text-neutral-400 text-xl md:text-lg font-normal mb-8">
+            Optimized API request performance, reducing load times
+            significantly.
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "Dec 29, 2024",
+      content: (
+        <div>
+          <p className="text-neutral-400 dark:text-neutral-400 text-xl md:text-lg font-normal mb-8">
+            Added support for custom playlists and user-defined filters. Users
+            can now create personalized playlists.
+          </p>
+          <p className="text-neutral-400 dark:text-neutral-400 text-xl md:text-lg font-normal mb-8">
+            Fixed various bugs and improved the overall stability of the
+            application.
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "Jan 5, 2025",
+      content: (
+        <div>
+          <p className="text-neutral-400 dark:text-neutral-400 text-xl md:text-lg font-normal mb-8">
+            Added new features and enhancements based on user feedback.
+          </p>
+          <p className="text-neutral-400 dark:text-neutral-400 text-xl md:text-lg font-normal mb-8">
+            Finalized the project and prepared it for public release.
           </p>
         </div>
       ),
