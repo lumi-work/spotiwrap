@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import { Timeline } from "@/components/ui/timeline-items";
 
@@ -39,7 +38,7 @@ export function TimelineOverview() {
             pages were created.
           </p>
           <p className="text-neutral-400 dark:text-neutral-400 text-xl md:text-lg font-normal mb-8">
-            Added functionality to display users' top tracks and artists.
+            Added functionality to display users top tracks and artists.
           </p>
         </div>
       ),

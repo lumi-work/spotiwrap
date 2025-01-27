@@ -3,10 +3,8 @@
 import { topItemsStore } from "@/stores/userTopItems";
 import React, { useEffect } from "react";
 import Skeleton from "@/components/dashboard/skeleton";
-import { FaLink } from "react-icons/fa";
 import toast from "react-hot-toast";
 import Image from "next/image";
-import Link from "next/link";
 
 const UserTopItems = () => {
   const { data, loading, error, fetchData } = topItemsStore();

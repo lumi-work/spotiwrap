@@ -8,7 +8,6 @@ import { BsMusicNoteList } from "react-icons/bs";
 import { TbTableSpark } from "react-icons/tb";
 import { FaChartBar, FaFire } from "react-icons/fa";
 import { LuCircleUser } from "react-icons/lu";
-import { IoIosSettings } from "react-icons/io";
 
 const menuItems = [
   {

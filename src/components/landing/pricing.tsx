@@ -2,7 +2,6 @@
 
 import { FaMicrophone } from "react-icons/fa";
 import { RiFlashlightFill } from "react-icons/ri";
-import { GiRocketFlight } from "react-icons/gi";
 
 import { PricingSection } from "@/components/ui/pricing-section";
 

@@ -163,7 +163,7 @@ function OverviewTop() {
                 ))
               ) : (
                 <p className="text-sm text-neutral-400">
-                  You don't have any playlists.
+                  You dont have any playlists.
                 </p>
               )}
               <Link href={"/dashboard/playlists"}>

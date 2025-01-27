@@ -4,7 +4,13 @@ import { createClient } from "@/utils/supabase/client";
 import React from "react";
 import { FaSpotify } from "react-icons/fa";
 
-function LoginButton({ text, className }: { text: string; className: string }) {
+function LoginButton({
+  text,
+  className,
+}: {
+  text: string;
+  className?: string;
+}) {
   const supabase = createClient();
 
   async function signInWithSpotify() {
