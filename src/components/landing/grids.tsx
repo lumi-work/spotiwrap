@@ -70,7 +70,7 @@ function Grids() {
             </h3>
             <p className="text-neutral-400 text-sm">
               Discover your listening habits throughout the day. See which hours
-              you're most active and explore your favorite tracks.
+              you are most active and explore your favorite tracks.
             </p>
             <div className="w-full h-48 md:h-64 flex items-center justify-center rounded-lg overflow-hidden mt-4">
               <div className="relative w-full h-full">
@@ -90,7 +90,7 @@ function Grids() {
             </h3>
             <p className="text-neutral-400 text-sm mb-8">
               Check out your top 15 most popular tracks. See which songs you
-              can't stop listening to.
+              cant stop listening to.
             </p>
             <div className="w-full h-48 md:h-64 flex items-center justify-center rounded-lg overflow-hidden">
               <div className="relative w-full h-full">

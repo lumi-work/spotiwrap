@@ -34,7 +34,7 @@ function Page() {
             connect your Spotify account, we access your data (such as
             playlists, tracks, and listening history) temporarily to generate
             your personalized wrap. This data is processed in real-time and is
-            not stored. We do not have control over Spotify's data policies, so
+            not stored. We do not have control over Spotifys data policies, so
             we encourage you to review{" "}
             <a
               href="https://www.spotify.com/privacy"
