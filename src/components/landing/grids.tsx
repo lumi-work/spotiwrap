@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import Grid1 from "@/assets/grid1.png";
-import Grid2 from "@/assets/grid2.png";
-import Grid3 from "@/assets/grid3.png";
-import Grid4 from "@/assets/grid4.png";
+import Grid1 from "@/assets/Grid1.png";
+import Grid2 from "@/assets/Grid2.png";
+import Grid3 from "@/assets/Grid3.png";
+import Grid4 from "@/assets/Grid4.png";
 
 function Grids() {
   return (
