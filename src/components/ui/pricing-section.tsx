@@ -70,7 +70,7 @@ export function PricingSection({ tiers, className }: PricingSectionProps) {
       )}
     >
       <div className="w-full max-w-7xl mx-auto">
-        <div className="flex flex-col items-center gap-4 mb-12">
+        <div className="flex flex-col items-center gap-4 mb-12 text-center">
           <h2 className="text-3xl font-bold text-neutral-50 dark:text-zinc-50">
             Unlock the Full Potential of Your Music Insights
           </h2>
