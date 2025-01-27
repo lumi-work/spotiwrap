@@ -31,10 +31,10 @@ function Footer() {
                 <a href="/">Documentation</a>
               </li>
               <li className="hover:text-neutral-400">
-                <a href="/">Privacy & Policy</a>
+                <a href="/privacy-policy">Privacy & Policy</a>
               </li>
               <li className="hover:text-neutral-400">
-                <a href="/">Terms of Service</a>
+                <a href="/terms-of-service">Terms of Service</a>
               </li>
               <li className="hover:text-neutral-400">
                 <a href="/">Support</a>
@@ -45,16 +45,16 @@ function Footer() {
             <ul className="text-neutral-300">
               <li className="font-semibold text-neutral-100 pb-2">Explore</li>
               <li className="hover:text-neutral-400">
-                <a href="/">lumi.work</a>
+                <a href="https://github.com/lumi-work">lumi.work</a>
               </li>
               <li className="hover:text-neutral-400">
-                <a href="/">Team</a>
+                <a href="/team">Team</a>
               </li>
               <li className="hover:text-neutral-400">
-                <a href="/">Github</a>
+                <a href="https://github.com/lumi-work/spotiwrap">Github</a>
               </li>
               <li className="hover:text-neutral-400">
-                <a href="/">Twitter</a>
+                <a href="https://x.com/works_lumi">Twitter</a>
               </li>
             </ul>
           </div>
