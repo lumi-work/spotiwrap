@@ -22,29 +22,29 @@
 
 ### Installation
 
-1. Clone the repository:
+#1. Clone the repository:
    ```bash
     git clone https://github.com/lumi-work/spotiwrap.git
     cd spotiwrap
     npm install
-or yarn install
-or pnpm install
-
-2. Create a .env.local file in the root folder and add your Spotify API credentials:
-
-SPOTIFY_CLIENT_ID=your_client_id
-SPOTIFY_CLIENT_SECRET=your_client_secret
-NEXT_PUBLIC_REDIRECT_URI=http://localhost:3000/api/auth/callback
-
-3. Run the development server:
-
+    or yarn install
+    or pnpm install
+ ```
+#2. Create a .env.local file in the root folder and add your Spotify API credentials:
+ ```bash
+   SPOTIFY_CLIENT_ID=your_client_id
+   SPOTIFY_CLIENT_SECRET=your_client_secret
+   NEXT_PUBLIC_REDIRECT_URI=http://localhost:3000/api/auth/callback 
+ ```
+#3. Run the development server:
+ ```bash
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-
-Open your browser at http://localhost:3000
+ ```
+#Open your browser at http://localhost:3000
 
 #Deployment
 The easiest way to deploy this project is with Vercel
