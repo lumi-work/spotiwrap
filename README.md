@@ -44,7 +44,7 @@ yarn dev
 # or
 pnpm dev
  ```
-#Open your browser at http://localhost:3000
+## Open your browser at http://localhost:3000
 
 ## Deployment
 The easiest way to deploy this project is with Vercel
