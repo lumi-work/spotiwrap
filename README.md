@@ -27,10 +27,8 @@
     git clone https://github.com/lumi-work/spotiwrap.git
     cd spotiwrap
     npm install
-# or
-yarn install
-# or
-pnpm install
+or yarn install
+or pnpm install
 
 2. Create a .env.local file in the root folder and add your Spotify API credentials:
 
