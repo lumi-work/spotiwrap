@@ -2,6 +2,7 @@
 
 **Spotiwrap** is an open-source web application that recreates the **Spotify Wrapped** experience. It allows users to view their most listened tracks, artists, and genres with a clean, interactive interface. Built with **Next.js** and **TypeScript**, it provides fast performance and a modern developer experience.
 
+Backed by dataprism
 ---
 
 ## Features
